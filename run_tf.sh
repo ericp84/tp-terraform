@@ -233,7 +233,7 @@ cat <<EOL > $playbook_file_path
         name: fail2ban
         state: restarted
 
-    - name: Effectuer une analyse avec Lynis et enregistrer dans un fichier
+    - name: Effectuer une analyse avec Lynis et enregistrer dans un fichier /tmp/lynis_audit.log
       ansible.builtin.shell:
         cmd: lynis audit system > /tmp/lynis_audit.log
 EOL
